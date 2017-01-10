@@ -38,7 +38,7 @@ def probability_of_killing(s, h):
         total_results += counters[i]
         if i >= h: killing_results += counters[i]
         
-    return killing_results/total_results
+    return round(killing_results/total_results * 1000000) / 1000000.0
 
 def solve(h, s):
     spells = read_string_array()
